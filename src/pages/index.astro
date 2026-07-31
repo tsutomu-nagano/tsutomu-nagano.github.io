@@ -43,7 +43,7 @@ const pageTitle = 'Tsutomu Nagano | Portfolio';
           <p class="eyebrow">Works in progress</p>
           <h2>作成中のサービス</h2>
           <p>
-            ここには今後、各サービスのスクリーンショット、URL、技術スタック、開発背景を追加していけます。
+            指定した GitHub リポジトリを確認し、サービス概要・URL・技術スタック・開発背景を追加していけます。
           </p>
         </div>
 
@@ -61,6 +61,22 @@ const pageTitle = 'Tsutomu Nagano | Portfolio';
                     <li>{tag}</li>
                   ))}
                 </ul>
+                {(service.liveUrl || service.repositoryUrl) && (
+                  <div class="card-links">
+                    {service.liveUrl && (
+                      <a href={service.liveUrl} target="_blank" rel="noreferrer">
+                        サイトを見る
+                      </a>
+                    )}
+                  {
+                    service.repositoryUrl && (
+                      <a href={service.repositoryUrl} target="_blank" rel="noreferrer">
+                        GitHub
+                      </a>
+                    )
+                  }
+                  </div>
+                )}
               </article>
             ))
           }

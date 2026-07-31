@@ -208,6 +208,19 @@ h3 {
   font-size: 0.83rem;
 }
 
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.card-links a {
+  color: var(--accent-strong);
+}
+
 .split {
   display: grid;
   grid-template-columns: 0.8fr 1fr;

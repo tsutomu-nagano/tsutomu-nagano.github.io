@@ -1,20 +1,42 @@
 [
   {
-    "name": "Service Concept 01",
-    "description": "日々の業務や意思決定を少し軽くするための Web サービス。ユーザーの操作導線と実用性を重視して設計しています。",
-    "tags": ["Web App", "UX", "Automation"],
-    "status": "Planning / Building"
+    "name": "ReSUME",
+    "description": "e-Stat APIで取得できる統計データをメタデータで整理し、GraphQL経由で検索しやすくする統計データ探索サービスです。",
+    "tags": ["TypeScript", "Next.js", "GraphQL", "e-Stat"],
+    "status": "Published",
+    "repositoryUrl": "https://github.com/tsutomu-nagano/resume",
+    "liveUrl": "https://resume-rho-five.vercel.app"
   },
   {
-    "name": "Service Concept 02",
-    "description": "データの収集・整理・可視化を通じて、現場で使えるインサイトに変換するサービスです。",
-    "tags": ["Data", "Dashboard", "Visualization"],
-    "status": "Prototype"
+    "name": "miner",
+    "description": "Excelファイルからブック・シート・セル構造のメタデータを抽出し、JSONとして確認できるCLI/APIとWebフロントエンドです。",
+    "tags": ["TypeScript", "React", "FastAPI", "Excel"],
+    "status": "Published",
+    "repositoryUrl": "https://github.com/tsutomu-nagano/miner",
+    "liveUrl": "https://miner-49e.pages.dev/"
   },
   {
-    "name": "Service Concept 03",
-    "description": "AI や外部 API を組み合わせ、繰り返し作業を自然に補助するツール群を想定しています。",
-    "tags": ["AI", "API", "Productivity"],
-    "status": "Research"
+    "name": "e-Stat extension",
+    "description": "e-Statの画面上で指標説明や統計調査の概要、公表予定などを見やすく補助するブラウザ拡張機能です。",
+    "tags": ["JavaScript", "Chrome Extension", "e-Stat"],
+    "status": "Prototype",
+    "repositoryUrl": "https://github.com/tsutomu-nagano/e-Stat_extension",
+    "liveUrl": ""
+  },
+  {
+    "name": "region-api",
+    "description": "標準地域コードと廃置分合データをPostgreSQLへ同期し、市区町村や合併履歴を取得できる読み取りAPIです。",
+    "tags": ["Python", "FastAPI", "PostgreSQL", "API"],
+    "status": "Published",
+    "repositoryUrl": "https://github.com/tsutomu-nagano/region-api",
+    "liveUrl": "https://region-api-4yia.onrender.com/docs"
+  },
+  {
+    "name": "machine-readable-checker",
+    "description": "CSV・TSV・Excel形式の統計表を検査し、機械判読しやすいデータにするための課題を見つける簡易チェッカーです。",
+    "tags": ["Python", "CLI", "Web UI", "Open Data"],
+    "status": "Prototype",
+    "repositoryUrl": "https://github.com/tsutomu-nagano/machine-readable-checker",
+    "liveUrl": ""
   }
 ]
