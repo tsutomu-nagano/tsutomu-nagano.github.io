@@ -43,5 +43,23 @@
     "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/machine-readable-checker",
     "liveUrl": ""
+  },
+  {
+    "name": "e4ts",
+    "description": "tidy dataをもとに統計表を作成するためのRライブラリです。欠損値変換、総数計算、複数の集計方法に対応しています。",
+    "tags": ["R", "Statistics", "Shiny", "Docker"],
+    "status": "Library",
+    "logoUrl": "",
+    "repositoryUrl": "https://github.com/tsutomu-nagano/e4ts",
+    "liveUrl": ""
+  },
+  {
+    "name": "d2gen",
+    "description": "符号表やJSON定義からダミーデータを生成するR製ツールです。レコード数やエラー率を指定し、HTMLレポートも出力できます。",
+    "tags": ["R", "CLI", "Docker", "Data"],
+    "status": "Tool",
+    "logoUrl": "",
+    "repositoryUrl": "https://github.com/tsutomu-nagano/d2gen",
+    "liveUrl": ""
   }
 ]
