@@ -4,6 +4,7 @@
     "description": "e-Stat APIで取得できる統計データをメタデータで整理し、GraphQL経由で検索しやすくする統計データ探索サービスです。",
     "tags": ["TypeScript", "Next.js", "GraphQL", "e-Stat"],
     "status": "Published",
+    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/resume/main/src/L1/resume/public/resume-logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/resume",
     "liveUrl": "https://resume-rho-five.vercel.app"
   },
@@ -12,6 +13,7 @@
     "description": "Excelファイルからブック・シート・セル構造のメタデータを抽出し、JSONとして確認できるCLI/APIとWebフロントエンドです。",
     "tags": ["TypeScript", "React", "FastAPI", "Excel"],
     "status": "Published",
+    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/miner/main/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/miner",
     "liveUrl": "https://miner-49e.pages.dev/"
   },
@@ -20,6 +22,7 @@
     "description": "e-Statの画面上で指標説明や統計調査の概要、公表予定などを見やすく補助するブラウザ拡張機能です。",
     "tags": ["JavaScript", "Chrome Extension", "e-Stat"],
     "status": "Prototype",
+    "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/e-Stat_extension",
     "liveUrl": ""
   },
@@ -28,6 +31,7 @@
     "description": "標準地域コードと廃置分合データをPostgreSQLへ同期し、市区町村や合併履歴を取得できる読み取りAPIです。",
     "tags": ["Python", "FastAPI", "PostgreSQL", "API"],
     "status": "Published",
+    "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/region-api",
     "liveUrl": "https://region-api-4yia.onrender.com/docs"
   },
@@ -36,6 +40,7 @@
     "description": "CSV・TSV・Excel形式の統計表を検査し、機械判読しやすいデータにするための課題を見つける簡易チェッカーです。",
     "tags": ["Python", "CLI", "Web UI", "Open Data"],
     "status": "Prototype",
+    "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/machine-readable-checker",
     "liveUrl": ""
   }

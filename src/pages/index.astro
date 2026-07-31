@@ -51,6 +51,11 @@ const pageTitle = 'Tsutomu Nagano | Portfolio';
           {
             services.map((service) => (
               <article class="service-card">
+                {service.logoUrl && (
+                  <div class="service-logo">
+                    <img src={service.logoUrl} alt={`${service.name} logo`} loading="lazy" />
+                  </div>
+                )}
                 <div class="card-topline">
                   <span>{service.status}</span>
                 </div>
