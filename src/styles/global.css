@@ -226,11 +226,18 @@ h3 {
   font-size: 0.83rem;
 }
 
-.tag-list img {
-  width: 16px;
-  height: 16px;
+.tag-icon {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
   flex: 0 0 auto;
-  object-fit: contain;
+  place-items: center;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .card-links {
