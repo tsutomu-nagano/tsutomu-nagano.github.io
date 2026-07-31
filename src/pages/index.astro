@@ -3,6 +3,18 @@ import '../styles/global.css';
 import services from '../data/services.json';
 
 const pageTitle = 'Tsutomu Nagano | Portfolio';
+
+const tagIcons: Record<string, string> = {
+  'Chrome Extension': 'https://cdn.simpleicons.org/googlechrome/4285f4',
+  FastAPI: 'https://cdn.simpleicons.org/fastapi/009688',
+  GraphQL: 'https://cdn.simpleicons.org/graphql/e10098',
+  JavaScript: 'https://cdn.simpleicons.org/javascript/f7df1e',
+  'Next.js': 'https://cdn.simpleicons.org/nextdotjs/24201c',
+  PostgreSQL: 'https://cdn.simpleicons.org/postgresql/4169e1',
+  Python: 'https://cdn.simpleicons.org/python/3776ab',
+  React: 'https://cdn.simpleicons.org/react/61dafb',
+  TypeScript: 'https://cdn.simpleicons.org/typescript/3178c6',
+};
 ---
 
 <!doctype html>
@@ -63,7 +75,12 @@ const pageTitle = 'Tsutomu Nagano | Portfolio';
                 <p>{service.description}</p>
                 <ul class="tag-list" aria-label={`${service.name} の技術タグ`}>
                   {service.tags.map((tag) => (
-                    <li>{tag}</li>
+                    <li>
+                      {tagIcons[tag] && (
+                        <img src={tagIcons[tag]} alt="" loading="lazy" aria-hidden="true" />
+                      )}
+                      <span>{tag}</span>
+                    </li>
                   ))}
                 </ul>
                 {(service.liveUrl || service.repositoryUrl) && (
