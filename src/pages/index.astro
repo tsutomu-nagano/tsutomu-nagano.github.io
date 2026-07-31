@@ -1,0 +1,106 @@
+---
+import '../styles/global.css';
+
+const pageTitle = 'Tsutomu Nagano | Portfolio';
+
+const services = [
+  {
+    name: 'Service Concept 01',
+    description:
+      '日々の業務や意思決定を少し軽くするための Web サービス。ユーザーの操作導線と実用性を重視して設計しています。',
+    tags: ['Web App', 'UX', 'Automation'],
+    status: 'Planning / Building',
+  },
+  {
+    name: 'Service Concept 02',
+    description:
+      'データの収集・整理・可視化を通じて、現場で使えるインサイトに変換するサービスです。',
+    tags: ['Data', 'Dashboard', 'Visualization'],
+    status: 'Prototype',
+  },
+  {
+    name: 'Service Concept 03',
+    description:
+      'AI や外部 API を組み合わせ、繰り返し作業を自然に補助するツール群を想定しています。',
+    tags: ['AI', 'API', 'Productivity'],
+    status: 'Research',
+  },
+];
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Tsutomu Nagano が作成しているサービスを紹介するポートフォリオサイトです。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="hero">
+        <p class="eyebrow">Service Portfolio</p>
+        <div class="hero-grid">
+          <div>
+            <h1>小さく試し、使える形まで育てるサービスづくり。</h1>
+            <p class="lead">
+              Tsutomu Nagano が企画・開発している Web サービスやプロトタイプをまとめるポートフォリオです。
+              課題発見から実装、改善まで、手触りのあるプロダクトづくりを大切にしています。
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#services">サービスを見る</a>
+              <a class="button secondary" href="https://github.com/tsutomu-nagano">GitHub</a>
+            </div>
+          </div>
+          <aside class="profile-card" aria-label="プロフィール概要">
+            <span class="avatar">TN</span>
+            <h2>Tsutomu Nagano</h2>
+            <p>Web / Data / AI を軸に、日常の課題を解くサービスを実装しています。</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Works in progress</p>
+          <h2>作成中のサービス</h2>
+          <p>
+            ここには今後、各サービスのスクリーンショット、URL、技術スタック、開発背景を追加していけます。
+          </p>
+        </div>
+
+        <div class="service-grid">
+          {
+            services.map((service) => (
+              <article class="service-card">
+                <div class="card-topline">
+                  <span>{service.status}</span>
+                </div>
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
+                <ul class="tag-list" aria-label={`${service.name} の技術タグ`}>
+                  {service.tags.map((tag) => (
+                    <li>{tag}</li>
+                  ))}
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="eyebrow">Approach</p>
+          <h2>大切にしていること</h2>
+        </div>
+        <div class="approach-list">
+          <p>まず小さく動くものを作り、使いながら価値を確かめること。</p>
+          <p>UI の美しさだけでなく、迷わず使える導線と運用しやすい構成にすること。</p>
+          <p>技術選定は目的から逆算し、軽く、速く、長く育てやすい形を選ぶこと。</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

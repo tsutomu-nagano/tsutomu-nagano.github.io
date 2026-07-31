@@ -1,0 +1,6 @@
+node_modules
+dist
+.git
+.github
+PROJECT_STATUS.md
+npm-debug.log*
