@@ -127,6 +127,30 @@ h3 {
   background: rgba(255, 255, 255, 0.62);
 }
 
+.icon-button {
+  width: 48px;
+  padding: 0;
+}
+
+.icon-button svg,
+.icon-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .profile-card,
 .service-card,
 .split {
@@ -259,6 +283,12 @@ h3 {
 
 .card-links a {
   color: var(--accent-strong);
+}
+
+.card-links .icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .split {

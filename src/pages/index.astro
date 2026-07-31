@@ -4,6 +4,7 @@ import services from '../data/services.json';
 import {
   siDocker,
   siFastapi,
+  siGithub,
   siGooglechrome,
   siGraphql,
   siJavascript,
@@ -65,7 +66,15 @@ const textIconTags: Record<string, string> = {
             </p>
             <div class="hero-actions">
               <a class="button primary" href="#services">サービスを見る</a>
-              <a class="button secondary" href="https://github.com/tsutomu-nagano">GitHub</a>
+              <a
+                class="button secondary icon-button"
+                href="https://github.com/tsutomu-nagano"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d={siGithub.path} />
+                </svg>
+              </a>
             </div>
           </div>
           <aside class="profile-card" aria-label="プロフィール概要">
@@ -134,8 +143,17 @@ const textIconTags: Record<string, string> = {
                     )}
                   {
                     service.repositoryUrl && (
-                      <a href={service.repositoryUrl} target="_blank" rel="noreferrer">
-                        GitHub
+                      <a
+                        class="icon-link"
+                        href={service.repositoryUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${service.name} のGitHubリポジトリ`}
+                      >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d={siGithub.path} />
+                        </svg>
+                        <span class="sr-only">GitHub</span>
                       </a>
                     )
                   }
