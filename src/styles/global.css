@@ -1,13 +1,14 @@
 :root {
   color-scheme: light;
-  --bg: #f7f3ec;
-  --panel: rgba(255, 255, 255, 0.76);
-  --text: #24201c;
-  --muted: #6f665d;
-  --line: rgba(36, 32, 28, 0.12);
-  --accent: #ba5b37;
-  --accent-strong: #8d3f25;
-  --shadow: 0 24px 70px rgba(48, 35, 24, 0.12);
+  --bg: #f3efff;
+  --panel: rgba(255, 255, 255, 0.78);
+  --text: #24163f;
+  --muted: #6d6281;
+  --line: rgba(69, 43, 122, 0.14);
+  --accent: #7c3aed;
+  --accent-strong: #5b21b6;
+  --accent-soft: #ede9fe;
+  --shadow: 0 24px 70px rgba(68, 38, 130, 0.16);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     sans-serif;
@@ -26,8 +27,9 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(255, 210, 168, 0.9), transparent 36rem),
-    linear-gradient(135deg, #fffaf3 0%, var(--bg) 48%, #ece3d6 100%);
+    radial-gradient(circle at top left, rgba(196, 181, 253, 0.92), transparent 34rem),
+    radial-gradient(circle at 82% 12%, rgba(216, 180, 254, 0.52), transparent 28rem),
+    linear-gradient(135deg, #fbfaff 0%, var(--bg) 48%, #e9d5ff 100%);
 }
 
 a {
@@ -122,7 +124,7 @@ h3 {
 }
 
 .button.secondary {
-  background: rgba(255, 255, 255, 0.54);
+  background: rgba(255, 255, 255, 0.62);
 }
 
 .profile-card,
@@ -147,7 +149,7 @@ h3 {
   place-items: center;
   border-radius: 24px;
   color: #fff;
-  background: linear-gradient(135deg, #24201c, #ba5b37);
+  background: linear-gradient(135deg, #24163f, #7c3aed 58%, #c084fc);
   font-weight: 900;
   letter-spacing: -0.04em;
 }
@@ -222,7 +224,8 @@ h3 {
   padding: 7px 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  color: var(--muted);
+  color: var(--accent-strong);
+  background: rgba(237, 233, 254, 0.72);
   font-size: 0.83rem;
 }
 
@@ -267,7 +270,7 @@ h3 {
 
 .approach-list p {
   padding-left: 18px;
-  border-left: 3px solid rgba(186, 91, 55, 0.28);
+  border-left: 3px solid rgba(124, 58, 237, 0.32);
 }
 
 @media (max-width: 840px) {
