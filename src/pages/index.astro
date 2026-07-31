@@ -1,23 +1,37 @@
 ---
 import '../styles/global.css';
 import services from '../data/services.json';
+import {
+  siFastapi,
+  siGooglechrome,
+  siGraphql,
+  siJavascript,
+  siNextdotjs,
+  siPostgresql,
+  siPython,
+  siReact,
+  siTypescript,
+} from 'simple-icons';
 
 const pageTitle = 'Tsutomu Nagano | Portfolio';
 
-const tagIcons: Record<string, string> = {
+const simpleIconTags = {
+  'Chrome Extension': siGooglechrome,
+  FastAPI: siFastapi,
+  GraphQL: siGraphql,
+  JavaScript: siJavascript,
+  'Next.js': siNextdotjs,
+  PostgreSQL: siPostgresql,
+  Python: siPython,
+  React: siReact,
+  TypeScript: siTypescript,
+};
+
+const textIconTags: Record<string, string> = {
   API: '{}',
-  'Chrome Extension': '◎',
   CLI: '$',
   Excel: 'XL',
-  FastAPI: '⚡',
-  GraphQL: '◇',
-  JavaScript: 'JS',
-  'Next.js': 'N',
   'Open Data': '□',
-  PostgreSQL: 'DB',
-  Python: 'Py',
-  React: '⚛',
-  TypeScript: 'TS',
   'Web UI': 'UI',
   'e-Stat': 'e',
 };
@@ -80,12 +94,30 @@ const tagIcons: Record<string, string> = {
                 <h3>{service.name}</h3>
                 <p>{service.description}</p>
                 <ul class="tag-list" aria-label={`${service.name} の技術タグ`}>
-                  {service.tags.map((tag) => (
-                    <li>
-                      {tagIcons[tag] && <span class="tag-icon" aria-hidden="true">{tagIcons[tag]}</span>}
-                      <span>{tag}</span>
-                    </li>
-                  ))}
+                  {
+                    service.tags.map((tag) => {
+                      const simpleIcon = simpleIconTags[tag];
+                      const textIcon = textIconTags[tag];
+
+                      return (
+                        <li>
+                          {simpleIcon && (
+                            <svg
+                              class="tag-icon simple-icon"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path d={simpleIcon.path} />
+                            </svg>
+                          )}
+                          {!simpleIcon && textIcon && (
+                            <span class="tag-icon" aria-hidden="true">{textIcon}</span>
+                          )}
+                          <span>{tag}</span>
+                        </li>
+                      );
+                    })
+                  }
                 </ul>
                 {(service.liveUrl || service.repositoryUrl) && (
                   <div class="card-links">

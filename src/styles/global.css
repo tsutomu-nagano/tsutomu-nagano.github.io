@@ -240,6 +240,11 @@ h3 {
   line-height: 1;
 }
 
+.simple-icon {
+  padding: 4px;
+  fill: currentColor;
+}
+
 .card-links {
   display: flex;
   flex-wrap: wrap;
