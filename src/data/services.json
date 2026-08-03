@@ -4,6 +4,8 @@
     "description": "e-Stat APIで取得できる統計データをメタデータで整理し、GraphQL経由で検索しやすくする統計データ探索サービスです。",
     "tags": ["TypeScript", "Next.js", "GraphQL", "e-Stat"],
     "status": "Published",
+    "featured": true,
+    "focus": "統計データ探索",
     "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/resume/main/src/L1/resume/public/resume-logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/resume",
     "liveUrl": "https://resume-rho-five.vercel.app"
@@ -13,15 +15,30 @@
     "description": "Excelファイルからブック・シート・セル構造のメタデータを抽出し、JSONとして確認できるCLI/APIとWebフロントエンドです。",
     "tags": ["TypeScript", "React", "FastAPI", "Excel"],
     "status": "Published",
+    "featured": true,
+    "focus": "Excelメタデータ抽出",
     "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/miner/main/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/miner",
     "liveUrl": "https://miner-49e.pages.dev/"
+  },
+  {
+    "name": "TUNAGU",
+    "description": "統計データIDを起点に、時点・地域・分類・後継関係などで関連する統計データを見つけるAPIとブラウザ拡張機能です。",
+    "tags": ["FastAPI", "PostgreSQL", "Chrome Extension", "e-Stat"],
+    "status": "Prototype",
+    "featured": true,
+    "focus": "関連データ探索",
+    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/TUNAGU/main/logo.png",
+    "repositoryUrl": "https://github.com/tsutomu-nagano/TUNAGU",
+    "liveUrl": ""
   },
   {
     "name": "e-Stat extension",
     "description": "e-Statの画面上で指標説明や統計調査の概要、公表予定などを見やすく補助するブラウザ拡張機能です。",
     "tags": ["JavaScript", "Chrome Extension", "e-Stat"],
     "status": "Prototype",
+    "featured": false,
+    "focus": "ブラウザ拡張",
     "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/e-Stat_extension",
     "liveUrl": ""
@@ -31,6 +48,8 @@
     "description": "標準地域コードと廃置分合データをPostgreSQLへ同期し、市区町村や合併履歴を取得できる読み取りAPIです。",
     "tags": ["Python", "FastAPI", "PostgreSQL", "API"],
     "status": "Published",
+    "featured": false,
+    "focus": "地域コードAPI",
     "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/region-api",
     "liveUrl": "https://region-api-4yia.onrender.com/docs"
@@ -40,6 +59,8 @@
     "description": "CSV・TSV・Excel形式の統計表を検査し、機械判読しやすいデータにするための課題を見つける簡易チェッカーです。",
     "tags": ["Python", "CLI", "Web UI", "Open Data"],
     "status": "Prototype",
+    "featured": false,
+    "focus": "統計表チェック",
     "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/machine-readable-checker",
     "liveUrl": ""
@@ -49,6 +70,8 @@
     "description": "tidy dataをもとに統計表を作成するためのRライブラリです。欠損値変換、総数計算、複数の集計方法に対応しています。",
     "tags": ["R", "Statistics", "Shiny", "Docker"],
     "status": "Library",
+    "featured": false,
+    "focus": "統計表作成",
     "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/e4ts",
     "liveUrl": ""
@@ -58,6 +81,8 @@
     "description": "符号表やJSON定義からダミーデータを生成するR製ツールです。レコード数やエラー率を指定し、HTMLレポートも出力できます。",
     "tags": ["R", "CLI", "Docker", "Data"],
     "status": "Tool",
+    "featured": false,
+    "focus": "ダミーデータ生成",
     "logoUrl": "",
     "repositoryUrl": "https://github.com/tsutomu-nagano/d2gen",
     "liveUrl": ""

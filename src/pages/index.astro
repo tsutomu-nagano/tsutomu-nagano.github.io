@@ -43,6 +43,9 @@ const textIconTags: Record<string, string> = {
   'Web UI': 'UI',
   'e-Stat': 'e',
 };
+
+const featuredServices = services.filter((service) => service.featured);
+const supportingServices = services.filter((service) => !service.featured);
 ---
 
 <!doctype html>
@@ -90,20 +93,21 @@ const textIconTags: Record<string, string> = {
           <p class="eyebrow">Works in progress</p>
           <h2>作成中のサービス</h2>
           <p>
-            指定した GitHub リポジトリを確認し、サービス概要・URL・技術スタック・開発背景を追加していけます。
+            主要サービスは背景と価値が伝わるように大きく、周辺ツールや実験中のものは要点を絞って紹介します。
           </p>
         </div>
 
-        <div class="service-grid">
+        <div class="featured-services" aria-label="主要サービス">
           {
-            services.map((service) => (
-              <article class="service-card">
+            featuredServices.map((service) => (
+              <article class="service-card service-card-featured">
                 {service.logoUrl && (
                   <div class="service-logo">
                     <img src={service.logoUrl} alt={`${service.name} logo`} loading="lazy" />
                   </div>
                 )}
                 <div class="card-topline">
+                  <strong>{service.focus}</strong>
                   <span>{service.status}</span>
                 </div>
                 <h3>{service.name}</h3>
@@ -162,6 +166,78 @@ const textIconTags: Record<string, string> = {
               </article>
             ))
           }
+        </div>
+
+        <div class="supporting-services" aria-label="その他のサービス">
+          <div class="service-group-heading">
+            <h3>その他のサービス・ツール</h3>
+            <p>用途が明確な補助ツールや検証中のプロトタイプです。</p>
+          </div>
+          <div class="service-grid compact">
+            {
+              supportingServices.map((service) => (
+                <article class="service-card service-card-compact">
+                  <div class="card-topline">
+                    <strong>{service.focus}</strong>
+                    <span>{service.status}</span>
+                  </div>
+                  <h3>{service.name}</h3>
+                  <p>{service.description}</p>
+                  <ul class="tag-list" aria-label={`${service.name} の技術タグ`}>
+                    {
+                      service.tags.slice(0, 3).map((tag) => {
+                        const simpleIcon = simpleIconTags[tag];
+                        const textIcon = textIconTags[tag];
+
+                        return (
+                          <li>
+                            {simpleIcon && (
+                              <svg
+                                class="tag-icon simple-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                              >
+                                <path d={simpleIcon.path} />
+                              </svg>
+                            )}
+                            {!simpleIcon && textIcon && (
+                              <span class="tag-icon" aria-hidden="true">{textIcon}</span>
+                            )}
+                            <span>{tag}</span>
+                          </li>
+                        );
+                      })
+                    }
+                  </ul>
+                  {(service.liveUrl || service.repositoryUrl) && (
+                    <div class="card-links">
+                      {service.liveUrl && (
+                        <a href={service.liveUrl} target="_blank" rel="noreferrer">
+                          サイトを見る
+                        </a>
+                      )}
+                      {
+                        service.repositoryUrl && (
+                          <a
+                            class="icon-link"
+                            href={service.repositoryUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`${service.name} のGitHubリポジトリ`}
+                          >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d={siGithub.path} />
+                            </svg>
+                            <span class="sr-only">GitHub</span>
+                          </a>
+                        )
+                      }
+                    </div>
+                  )}
+                </article>
+              ))
+            }
+          </div>
         </div>
       </section>
 
