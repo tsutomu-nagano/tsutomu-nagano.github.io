@@ -6,6 +6,8 @@
     "status": "Published",
     "featured": true,
     "focus": "統計データ探索",
+    "features": ["統計表をメタデータで整理", "GraphQLで横断検索", "e-Stat APIの利用導線を短縮"],
+    "diagram": ["e-Stat API", "メタデータ整理", "GraphQL検索", "必要な統計表"],
     "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/resume/main/src/L1/resume/public/resume-logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/resume",
     "liveUrl": "https://resume-rho-five.vercel.app"
@@ -17,6 +19,8 @@
     "status": "Published",
     "featured": true,
     "focus": "Excelメタデータ抽出",
+    "features": ["ブック・シート・セル構造を抽出", "JSONで内容を確認", "APIとWeb UIで再利用"],
+    "diagram": ["Excel", "構造解析", "JSON/API", "Web UI"],
     "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/miner/main/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/miner",
     "liveUrl": "https://miner-49e.pages.dev/"
@@ -28,6 +32,8 @@
     "status": "Prototype",
     "featured": true,
     "focus": "関連データ探索",
+    "features": ["統計データIDから関連データを探索", "時点・地域・分類などの関係を整理", "e-Stat画面上で関連データを表示"],
+    "diagram": ["統計データID", "関連関係DB", "API", "ブラウザ拡張"],
     "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/TUNAGU/main/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/TUNAGU",
     "liveUrl": ""

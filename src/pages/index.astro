@@ -46,6 +46,7 @@ const textIconTags: Record<string, string> = {
 
 const featuredServices = services.filter((service) => service.featured);
 const supportingServices = services.filter((service) => !service.featured);
+const primaryService = featuredServices[0];
 ---
 
 <!doctype html>
@@ -58,61 +59,155 @@ const supportingServices = services.filter((service) => !service.featured);
     <title>{pageTitle}</title>
   </head>
   <body>
-    <main class="site-shell">
-      <section class="hero">
-        <p class="eyebrow">Service Portfolio</p>
-        <div class="hero-grid">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Tsutomu Nagano Portfolio">
+        <span class="brand-mark">TN</span>
+        <span>Stat Tools</span>
+      </a>
+      <nav class="site-nav" aria-label="主要ナビゲーション">
+        <a href="#start">使ってみる</a>
+        <a href="#services">主要サービス</a>
+        <a href="#ecosystem">ツール</a>
+        <a href="#approach">方針</a>
+      </nav>
+      <a
+        class="header-icon-link"
+        href="https://github.com/tsutomu-nagano"
+        aria-label="GitHub"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d={siGithub.path} />
+        </svg>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero lp-band">
+        <div class="site-shell hero-grid">
           <div>
+            <p class="eyebrow">Service Portfolio</p>
             <h1>統計データを、もっと使いやすく。</h1>
             <p class="lead">
-              探しやすく、比べやすく、活用しやすい形で、必要なデータにたどり着ける体験をつくります。
+              e-Stat、Excel、地域コード、関連データ。扱いにくいデータを、探せる・つなげる・検査できる形へ整えるための実験とサービス群です。
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="#services">サービスを見る</a>
-              <a
-                class="button secondary icon-button"
-                href="https://github.com/tsutomu-nagano"
-                aria-label="GitHub"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d={siGithub.path} />
-                </svg>
-              </a>
+              <a class="button primary" href="#start">使い方を見る</a>
+              <a class="button secondary" href="#ecosystem">ツールを探す</a>
             </div>
           </div>
-          <aside class="profile-card" aria-label="プロフィール概要">
-            <span class="avatar">TN</span>
-            <h2>Tsutomu Nagano</h2>
-            <p>Web / Data / AI を軸に、日常の課題を解くサービスを実装しています。</p>
+          <aside class="hero-panel" aria-label="サービスの概要">
+            <div class="panel-toolbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>source: e-Stat / Excel / Region
+normalize: metadata + relation
+interface: API / GraphQL / Web UI
+output: usable statistical data</code></pre>
+            <dl class="hero-metrics">
+              <div>
+                <dt>{featuredServices.length}</dt>
+                <dd>主要サービス</dd>
+              </div>
+              <div>
+                <dt>{services.length}</dt>
+                <dd>公開中の実験</dd>
+              </div>
+            </dl>
           </aside>
         </div>
       </section>
 
-      <section class="section" id="services">
-        <div class="section-heading">
-          <p class="eyebrow">Works in progress</p>
-          <h2>作成中のサービス</h2>
-          <p>
-            主要サービスは背景と価値が伝わるように大きく、周辺ツールや実験中のものは要点を絞って紹介します。
-          </p>
+      <section class="section lp-band muted-band" id="start">
+        <div class="site-shell start-grid">
+          <div class="section-heading">
+            <p class="eyebrow">Get started</p>
+            <h2>まずは主要サービスから</h2>
+            <p>
+              統計表を探す、Excelを解析する、関連データをたどる。入口ごとに使うサービスを選べます。
+            </p>
+          </div>
+          <div class="quickstart">
+            <div class="quickstart-step">
+              <span>1</span>
+              <h3>探す</h3>
+              <p>ReSUMEで統計データをメタデータから検索します。</p>
+            </div>
+            <div class="quickstart-step">
+              <span>2</span>
+              <h3>整える</h3>
+              <p>minerでExcelの構造をJSON/APIとして扱える形にします。</p>
+            </div>
+            <div class="quickstart-step">
+              <span>3</span>
+              <h3>つなぐ</h3>
+              <p>TUNAGUで関連する統計データをたどります。</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="featured-services" aria-label="主要サービス">
-          {
-            featuredServices.map((service) => (
-              <article class="service-card service-card-featured">
-                {service.logoUrl && (
-                  <div class="service-logo">
-                    <img src={service.logoUrl} alt={`${service.name} logo`} loading="lazy" />
+      <section class="section" id="services">
+        <div class="site-shell">
+          <div class="section-heading wide-heading">
+            <p class="eyebrow">Solutions</p>
+            <h2>現場のデータ利用を前に進める</h2>
+            <p>
+              それぞれのサービスは独立していますが、共通して「統計データを人とシステムの両方が扱いやすい状態へ近づける」ことを目指しています。
+            </p>
+          </div>
+
+          <div class="featured-services" aria-label="主要サービス">
+            {
+              featuredServices.map((service) => (
+                <article class="feature-showcase">
+                <div class="feature-copy">
+                  {service.logoUrl && (
+                    <div class="service-logo">
+                      <img src={service.logoUrl} alt={`${service.name} logo`} loading="lazy" />
+                    </div>
+                  )}
+                  <div class="card-topline">
+                    <strong>{service.focus}</strong>
+                    <span>{service.status}</span>
                   </div>
-                )}
-                <div class="card-topline">
-                  <strong>{service.focus}</strong>
-                  <span>{service.status}</span>
+                  {!service.logoUrl && <h3>{service.name}</h3>}
+                  <p>{service.description}</p>
+                  <ul class="feature-list" aria-label={`${service.name} の特徴`}>
+                    {service.features.map((feature) => <li>{feature}</li>)}
+                  </ul>
+                  {(service.liveUrl || service.repositoryUrl) && (
+                    <div class="card-links">
+                      {service.liveUrl && (
+                        <a href={service.liveUrl} target="_blank" rel="noreferrer">
+                          サイトを見る
+                        </a>
+                      )}
+                    {
+                      service.repositoryUrl && (
+                        <a
+                          class="icon-link"
+                          href={service.repositoryUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`${service.name} のGitHubリポジトリ`}
+                        >
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d={siGithub.path} />
+                          </svg>
+                          <span class="sr-only">GitHub</span>
+                        </a>
+                      )
+                    }
+                    </div>
+                  )}
                 </div>
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-                <ul class="tag-list" aria-label={`${service.name} の技術タグ`}>
+                <div class="feature-visual" aria-label={`${service.name} の仕組み`}>
+                  <div class="flow-diagram" aria-hidden="true">
+                    {service.diagram.map((step) => <span>{step}</span>)}
+                  </div>
+                  <ul class="tag-list" aria-label={`${service.name} の技術タグ`}>
                   {
                     service.tags.map((tag) => {
                       const simpleIcon = simpleIconTags[tag];
@@ -137,41 +232,23 @@ const supportingServices = services.filter((service) => !service.featured);
                       );
                     })
                   }
-                </ul>
-                {(service.liveUrl || service.repositoryUrl) && (
-                  <div class="card-links">
-                    {service.liveUrl && (
-                      <a href={service.liveUrl} target="_blank" rel="noreferrer">
-                        サイトを見る
-                      </a>
-                    )}
-                  {
-                    service.repositoryUrl && (
-                      <a
-                        class="icon-link"
-                        href={service.repositoryUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`${service.name} のGitHubリポジトリ`}
-                      >
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <path d={siGithub.path} />
-                        </svg>
-                        <span class="sr-only">GitHub</span>
-                      </a>
-                    )
-                  }
-                  </div>
-                )}
+                  </ul>
+                </div>
               </article>
-            ))
-          }
+              ))
+            }
+          </div>
         </div>
+      </section>
 
-        <div class="supporting-services" aria-label="その他のサービス">
+      <section class="section lp-band muted-band" id="ecosystem">
+        <div class="site-shell supporting-services" aria-label="その他のサービス">
           <div class="service-group-heading">
-            <h3>その他のサービス・ツール</h3>
-            <p>用途が明確な補助ツールや検証中のプロトタイプです。</p>
+            <div>
+              <p class="eyebrow">Ecosystem</p>
+              <h2>周辺ツールもまとめて見る</h2>
+            </div>
+            <p>用途が明確な補助ツールや検証中のプロトタイプです。必要な処理に近いものから選べます。</p>
           </div>
           <div class="service-grid compact">
             {
@@ -241,7 +318,7 @@ const supportingServices = services.filter((service) => !service.featured);
         </div>
       </section>
 
-      <section class="section split">
+      <section class="section split site-shell" id="approach">
         <div>
           <p class="eyebrow">Approach</p>
           <h2>大切にしていること</h2>
@@ -250,6 +327,23 @@ const supportingServices = services.filter((service) => !service.featured);
           <p>まず小さく動くものを作り、使いながら価値を確かめること。</p>
           <p>UI の美しさだけでなく、迷わず使える導線と運用しやすい構成にすること。</p>
           <p>技術選定は目的から逆算し、軽く、速く、長く育てやすい形を選ぶこと。</p>
+        </div>
+      </section>
+
+      <section class="section final-cta">
+        <div class="site-shell final-cta-inner">
+          <p class="eyebrow">Build with data</p>
+          <h2>データを使える形にするところから始める。</h2>
+          <div class="hero-actions">
+            {primaryService?.liveUrl && (
+              <a class="button primary" href={primaryService.liveUrl} target="_blank" rel="noreferrer">
+                ReSUMEを開く
+              </a>
+            )}
+            <a class="button secondary" href="https://github.com/tsutomu-nagano" target="_blank" rel="noreferrer">
+              GitHubを見る
+            </a>
+          </div>
         </div>
       </section>
     </main>
