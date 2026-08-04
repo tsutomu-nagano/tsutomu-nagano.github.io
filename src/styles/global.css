@@ -543,13 +543,13 @@ h3 {
 }
 
 .service-card-compact .service-logo {
-  min-height: 48px;
+  min-height: 64px;
   margin-bottom: 16px;
 }
 
 .service-card-compact .service-logo img {
-  max-width: min(150px, 100%);
-  max-height: 48px;
+  max-width: min(196px, 100%);
+  max-height: 64px;
 }
 
 .service-card-compact p {
@@ -579,6 +579,10 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.has-logo .card-topline {
+  margin-bottom: 14px;
 }
 
 .card-topline strong {

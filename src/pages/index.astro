@@ -161,18 +161,18 @@ output: usable statistical data</code></pre>
           <div class="featured-services" aria-label="主要サービス">
             {
               featuredServices.map((service) => (
-                <article class="feature-showcase">
+                <article class:list={["feature-showcase", service.logoUrl && "has-logo"]}>
                 <div class="feature-copy">
                   {service.logoUrl && (
                     <div class="service-logo">
                       <img src={service.logoUrl} alt={`${service.name} logo`} loading="lazy" />
                     </div>
                   )}
+                  {!service.logoUrl && <h3>{service.name}</h3>}
                   <div class="card-topline">
                     <strong>{service.focus}</strong>
                     <span>{service.status}</span>
                   </div>
-                  {!service.logoUrl && <h3>{service.name}</h3>}
                   <p>{service.description}</p>
                   <ul class="feature-list" aria-label={`${service.name} の特徴`}>
                     {service.features.map((feature) => <li>{feature}</li>)}
@@ -253,17 +253,17 @@ output: usable statistical data</code></pre>
           <div class="service-grid compact">
             {
               supportingServices.map((service) => (
-                <article class="service-card service-card-compact">
+                <article class:list={["service-card service-card-compact", service.logoUrl && "has-logo"]}>
                   {service.logoUrl && (
                     <div class="service-logo">
                       <img src={service.logoUrl} alt={`${service.name} logo`} loading="lazy" />
                     </div>
                   )}
+                  {!service.logoUrl && <h3>{service.name}</h3>}
                   <div class="card-topline">
                     <strong>{service.focus}</strong>
                     <span>{service.status}</span>
                   </div>
-                  {!service.logoUrl && <h3>{service.name}</h3>}
                   <p>{service.description}</p>
                   <ul class="tag-list" aria-label={`${service.name} の技術タグ`}>
                     {
