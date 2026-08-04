@@ -254,6 +254,11 @@ output: usable statistical data</code></pre>
             {
               supportingServices.map((service) => (
                 <article class="service-card service-card-compact">
+                  {service.logoUrl && (
+                    <div class="service-logo">
+                      <img src={service.logoUrl} alt={`${service.name} logo`} loading="lazy" />
+                    </div>
+                  )}
                   <div class="card-topline">
                     <strong>{service.focus}</strong>
                     <span>{service.status}</span>

@@ -67,7 +67,7 @@
     "status": "Prototype",
     "featured": false,
     "focus": "統計表チェック",
-    "logoUrl": "",
+    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/machine-readable-checker/main/src/machine_readable_checker/static/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/machine-readable-checker",
     "liveUrl": ""
   },
@@ -78,7 +78,7 @@
     "status": "Library",
     "featured": false,
     "focus": "統計表作成",
-    "logoUrl": "",
+    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/e4ts/main/assets/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/e4ts",
     "liveUrl": ""
   },
