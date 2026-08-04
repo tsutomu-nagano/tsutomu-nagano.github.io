@@ -263,7 +263,7 @@ output: usable statistical data</code></pre>
                     <strong>{service.focus}</strong>
                     <span>{service.status}</span>
                   </div>
-                  <h3>{service.name}</h3>
+                  {!service.logoUrl && <h3>{service.name}</h3>}
                   <p>{service.description}</p>
                   <ul class="tag-list" aria-label={`${service.name} の技術タグ`}>
                     {
