@@ -89,7 +89,7 @@
     "status": "Tool",
     "featured": false,
     "focus": "ダミーデータ生成",
-    "logoUrl": "",
+    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/d2gen/main/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/d2gen",
     "liveUrl": ""
   }
