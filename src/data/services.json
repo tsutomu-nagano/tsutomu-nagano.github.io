@@ -56,7 +56,7 @@
     "status": "Published",
     "featured": false,
     "focus": "地域コードAPI",
-    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/region-api/main/frontend/public/assets/region-api-logo.jpg",
+    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/region-api/main/frontend/public/assets/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/region-api",
     "liveUrl": "https://region-api-4yia.onrender.com/docs"
   },
