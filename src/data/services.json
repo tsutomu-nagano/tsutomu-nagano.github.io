@@ -45,7 +45,7 @@
     "status": "Prototype",
     "featured": false,
     "focus": "ブラウザ拡張",
-    "logoUrl": "",
+    "logoUrl": "https://raw.githubusercontent.com/tsutomu-nagano/e-Stat_extension/main/src/resources/logo.png",
     "repositoryUrl": "https://github.com/tsutomu-nagano/e-Stat_extension",
     "liveUrl": ""
   },
